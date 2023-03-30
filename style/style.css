@@ -1,0 +1,14 @@
+.container{
+    width: 550px;
+    height: 100vh;
+    margin: 50px auto;
+}
+
+ul{
+    list-style: none;
+}
+
+#emptyList{
+    text-align: center;
+    margin: 15px auto;
+}
