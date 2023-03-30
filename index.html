@@ -20,7 +20,7 @@
 
                 <ul class="ms-3" v-if="toDolist.length > 0">
 
-                    <li class="alert alert-success">
+                    <li class="alert alert-success" v-for="(task, index) in toDolist">
                         <span>{{task.name}}</span>
                         <button @click.stop="deleteTask(index)" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
                         <button @click="done(index)" class="btn btn-success"><i class="fa-solid fa-check"></i></button>

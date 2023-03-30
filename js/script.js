@@ -52,6 +52,7 @@ createApp ({
             ],
             newTaskText:'',
             errorText: false,
+            
         }
     }, 
     methods: {
