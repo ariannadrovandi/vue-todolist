@@ -14,16 +14,16 @@
     <div id="app">
         <div class="container">
             <div>
-                <input type="text" name="thingsToDo" id="thingsToDo" class="ms-5" v-model="newTask">
+                <input type="text" name="thingsToDo" id="thingsToDo" class="ms-5" v-model="newTask" @keyup.enter="add" placeholder="Aggiungi task">
 
-                <button class="btn btn-primary">Invia</button>
+                <button @click="add" class="btn btn-primary">Invia</button>
 
-                <ul class="ms-3 " v-if="toDolist.length > 0">
+                <ul class="ms-3" v-if="toDolist.length > 0">
 
                     <li class="alert alert-success">
-                        <span>{{item.name}}</span>
-                        <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
-                        <button class="btn btn-success"><i class="fa-solid fa-check"></i></button>
+                        <span>{{task.name}}</span>
+                        <button @click.stop="deleteTask(index)" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                        <button @click="done(index)" class="btn btn-success"><i class="fa-solid fa-check"></i></button>
                     </li>
 
                 </ul>

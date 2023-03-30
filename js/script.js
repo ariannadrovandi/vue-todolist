@@ -50,6 +50,33 @@ createApp ({
                     completed: false,
                 },
             ],
+            newTaskText:'',
+            errorText: false,
+        }
+    }, 
+    methods: {
+        add() {
+            if (this.newTaskText.length < 2) {
+                this.errorText = true;
+                return
+            }
+            const newTask = {
+                name: this.newTaskText,
+                completed: false,
+            }
+            this.toDolist.push(newTask);
+            this.newTaskText = "";
         },
-    },
+        deleteTask() {
+            this.toDolist.splice(this.index, 1)
+        },
+        done(index) {
+            if (this.toDolist[index].completed === false) { 
+                this.toDolist[index].completed = true; 
+            } else {
+                this.toDolist[index].completed = false; 
+
+            }
+        },
+    }
 }).mount('#app');
