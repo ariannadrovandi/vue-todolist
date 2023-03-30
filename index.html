@@ -12,7 +12,25 @@
 <body>
 
     <div id="app">
-        
+        <div class="container">
+            <div>
+                <input type="text" name="thingsToDo" id="thingsToDo" class="ms-5" v-model="newTask">
+
+                <button class="btn btn-primary">Invia</button>
+
+                <ul class="ms-3 " v-if="toDolist.length > 0">
+
+                    <li class="alert alert-success">
+                        <span>{{item.name}}</span>
+                        <button class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
+                        <button class="btn btn-success"><i class="fa-solid fa-check"></i></button>
+                    </li>
+
+                </ul>
+
+                <h3 id="emptyList" v-else>La lista delle cose da fare è vuota</h3>
+            </div>
+        </div>
     </div>
     
     <!-- vue.js -->

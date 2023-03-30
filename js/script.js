@@ -27,20 +27,3 @@ del todo corrispondente (se done era uguale a false, impostare true
 e viceversa)
 */
 
-const {createApp} = Vue;
-
-createApp ({
-    data(){
-        return{
-            toDolist: [
-                {
-                    name: 'mandare email',
-                },
-            ],
-        }
-    },
-    methods: {
-
-    },
-    
-}).mount('#app');
