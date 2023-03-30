@@ -27,3 +27,29 @@ del todo corrispondente (se done era uguale a false, impostare true
 e viceversa)
 */
 
+const {createApp} = Vue;
+
+createApp ({
+    data(){
+        return{
+            toDolist: [
+                {
+                    name: 'controllare le email',
+                    completed: false,
+                },
+                {
+                    name: 'controllare doc',
+                    completed: false,
+                },
+                {
+                    name: 'visionare progetto',
+                    completed: false,
+                },
+                {
+                    name: 'call ore 14:30',
+                    completed: false,
+                },
+            ],
+        },
+    },
+}).mount('#app');
