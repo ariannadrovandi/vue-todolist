@@ -34,20 +34,20 @@ createApp ({
         return{
             toDolist: [
                 {
-                    name: 'controllare le email',
-                    completed: false,
+                    text: 'controllare le email',
+                    done: false,
                 },
                 {
-                    name: 'controllare doc',
-                    completed: false,
+                    text: 'controllare doc',
+                    done: false,
                 },
                 {
-                    name: 'visionare progetto',
-                    completed: false,
+                    text: 'visionare progetto',
+                    done: false,
                 },
                 {
-                    name: 'call ore 14:30',
-                    completed: false,
+                    text: 'call ore 14:30',
+                    done: false,
                 },
             ],
             newTaskText:'',
@@ -57,8 +57,8 @@ createApp ({
     methods: {
         addTask() {
             const newTask = {
-                name: this.newTaskText,
-                completed: false,
+                text: this.newTaskText,
+                done: false,
             }
             this.toDolist.push(newTask);
             this.newTaskText = " ";
@@ -68,7 +68,7 @@ createApp ({
             this.toDolist.splice(this.index, 1)
         },
         check(index) {
-            this.toDolist[index].completed = true;
+            this.toDolist[index].done = true;
         },
     }
 }).mount('#app');
