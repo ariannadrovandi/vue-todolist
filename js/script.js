@@ -63,10 +63,9 @@ createApp ({
                 text: this.newTaskText,
                 done: false,
             }
+            this.toDolist.unshift(newTask);
             this.newTaskText = '';
-            
-            // this.toDolist.unshift({...this.newTask});
-            // this.newtask.text = '';
+            this.newtask.text = '';
             
         },
         deleteTask(index) {
