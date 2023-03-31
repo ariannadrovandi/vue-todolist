@@ -12,3 +12,19 @@ ul{
     text-align: center;
     margin: 15px auto;
 }
+
+.btn-trash{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+}
+
+.ad-check{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+
+.done{
+    text-decoration: line-through;
+}

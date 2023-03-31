@@ -51,7 +51,10 @@ createApp ({
                 },
             ],
             newTaskText:'',
-            
+            // newTask = {
+            //     text: '',
+            //     done: false,
+            // },
         }
     }, 
     methods: {
@@ -60,12 +63,14 @@ createApp ({
                 text: this.newTaskText,
                 done: false,
             }
-            this.toDolist.push(newTask);
-            this.newTaskText = " ";
+            this.newTaskText = '';
+            
+            // this.toDolist.unshift({...this.newTask});
+            // this.newtask.text = '';
             
         },
-        deleteTask() {
-            this.toDolist.splice(this.index, 1)
+        deleteTask(index) {
+            this.toDolist.splice(index, 1)
         },
         check(index) {
             this.toDolist[index].done = true;
